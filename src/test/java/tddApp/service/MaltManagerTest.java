@@ -59,7 +59,6 @@ public class MaltManagerTest {
         assertEquals(malt2.getColorEBC(), maltManager.read(1).getColorEBC());
         assertEquals(malt2.getProducer(), maltManager.read(1).getProducer());
     }
-    
 
     @org.junit.Test
     public void delete() throws Exception {
