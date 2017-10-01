@@ -24,4 +24,4 @@ os:
   - linux
 
 # install: tool/travis-install.sh
-script: tool/travis-script.sh
+script: travis-script.sh
