@@ -15,7 +15,7 @@ public interface MaltManager {
 
     Malt read(int id);
 
-    void update(Malt malt);
+    void update(Malt malt) throws Exception;
 
     void delete(Malt malt);
 

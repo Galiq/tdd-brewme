@@ -28,7 +28,7 @@ public class MaltArrayManager implements MaltManager {
         return null;
     }
 
-    public void update(Malt malt) {
+    public void update(Malt malt) throws Exception {
         Malt maltToUpdate = read(malt.getId());
         int index = maltCollection.indexOf(maltToUpdate);
         maltToUpdate.setName(malt.getName());
