@@ -1,18 +1,15 @@
 package tddApp.service;
 
-import junit.framework.TestCase;
 import tddApp.domain.Malt;
 
-import java.util.ArrayList;
-
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Created by galik on 01.10.2017.
  */
 public class MaltManagerTest {
     @org.junit.Test
-    public void createTest() throws Exception {
+    public void create() throws Exception {
         MaltManager maltManager = new MaltArrayManager();
         Malt malt = new Malt(1, "elo", 1, 1, "strzegom");
         maltManager.create(malt);
@@ -29,7 +26,6 @@ public class MaltManagerTest {
         maltManager.create(malt);
 
         assertEquals(1, maltManager.read().size());
-
     }
 
     @org.junit.Test
