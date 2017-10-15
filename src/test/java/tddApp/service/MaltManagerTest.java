@@ -1,6 +1,7 @@
 package tddApp.service;
 
 import tddApp.domain.Malt;
+import tddApp.exception.NotFoundException;
 
 import static org.junit.Assert.assertEquals;
 
@@ -56,8 +57,8 @@ public class MaltManagerTest {
         assertEquals(malt2.getProducer(), maltManager.read(1).getProducer());
     }
 
-    @org.junit.Test(expected = NullPointerException.class)
-    public void updateException() throws Exception {
+    @org.junit.Test(expected = NotFoundException.class)
+    public void updateException() throws NotFoundException {
         MaltManager maltManager = new MaltArrayManager();
         Malt malt = new Malt(1, "elo", 1, 1, "strzegom");
         Malt malt2 = new Malt(2, "dwa zero", 2, 2, "malteurope");

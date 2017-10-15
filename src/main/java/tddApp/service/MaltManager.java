@@ -1,6 +1,7 @@
 package tddApp.service;
 
 import tddApp.domain.Malt;
+import tddApp.exception.NotFoundException;
 
 import java.util.ArrayList;
 
@@ -15,7 +16,7 @@ public interface MaltManager {
 
     Malt read(int id);
 
-    void update(Malt malt) throws Exception;
+    void update(Malt malt) throws NotFoundException;
 
     void delete(Malt malt);
 

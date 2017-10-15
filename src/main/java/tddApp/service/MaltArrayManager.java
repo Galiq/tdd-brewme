@@ -1,6 +1,7 @@
 package tddApp.service;
 
 import tddApp.domain.Malt;
+import tddApp.exception.NotFoundException;
 
 import java.util.ArrayList;
 
@@ -28,14 +29,22 @@ public class MaltArrayManager implements MaltManager {
         return null;
     }
 
-    public void update(Malt malt) throws Exception {
-        Malt maltToUpdate = read(malt.getId());
-        int index = maltCollection.indexOf(maltToUpdate);
-        maltToUpdate.setName(malt.getName());
-        maltToUpdate.setQunatity(malt.getQunatity());
-        maltToUpdate.setColorEBC(malt.getColorEBC());
-        maltToUpdate.setProducer(malt.getProducer());
-        maltCollection.add(index, maltToUpdate);
+    /**
+     * @param malt
+     * @throws Exception
+     */
+    public void update(Malt malt) throws NotFoundException {
+        try {
+            Malt maltToUpdate = read(malt.getId());
+            int index = maltCollection.indexOf(maltToUpdate);
+            maltToUpdate.setName(malt.getName());
+            maltToUpdate.setQunatity(malt.getQunatity());
+            maltToUpdate.setColorEBC(malt.getColorEBC());
+            maltToUpdate.setProducer(malt.getProducer());
+            maltCollection.add(index, maltToUpdate);
+        } catch (NullPointerException exception){
+            throw (new NotFoundException("Malt with index not found"));
+        }
     }
 
     public void delete(Malt malt) {
