@@ -27,7 +27,7 @@ public class SuccessLoginSteps {
     }
 
     @AfterClass
-    protected void cleanup(){
+    protected void cleanup() {
         driver.quit();
     }
 
