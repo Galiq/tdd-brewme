@@ -1,3 +1,6 @@
-Url to Travis: https://travis-ci.org/Galiq/tdd-brewme
+Przykład oryginalnie przygotowany przez dr Jakuba Neumanna
 
-[![Build Status](https://travis-ci.org/Galiq/tdd-brewme.svg?branch=master)](https://travis-ci.org/Galiq/tdd-brewme)
+Rozwinięty przez Tadeusza Puźniakowskiego
+
+Przykład do zajęć z testowania aplikacji
+

@@ -1,0 +1,2 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,Latency,IdleTime,Connect
+1516535211483,2,dbCleanup,42501 -5501,java.sql.SQLSyntaxErrorException: user lacks privilege or object not found: PERSON,tearDown Thread Group 1-1,text,false,,48,0,1,1,0,0,1
